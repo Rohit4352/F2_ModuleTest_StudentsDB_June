@@ -1,0 +1,88 @@
+body {
+    background-color: black;
+    margin: 20px;
+}
+* {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    padding: 0;
+}
+
+h2 {
+    color: white;
+    font-size: 48px;
+    margin-left: 30px;
+}
+.entry-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+input{
+    padding: 10px;
+    margin: 10px;
+
+    background-color: transparent;
+    border: 1px solid white;
+    color: #ffffff;
+    font-size: 24px;
+}
+input::placeholder{
+    font-size: 24px;
+    color: rgb(255, 255, 255, 0.5);
+}
+
+form input[type=submit]{
+    background-color: white;
+    color: black;
+    width: 40%;
+    margin-left: 20px;
+    cursor: pointer;
+}
+form input[type=submit]:hover{
+    box-shadow:  2px 2px 2px grey;
+}
+form input[type=submit]:active {
+    transform: translateY(4px);
+}
+
+input[type=search] {
+    width: 100%;
+    margin: 30px 0px;
+}
+
+table{
+    border-collapse: collapse;
+    text-align: center;
+    color: white;
+}
+table.list{
+    width:100%;
+    text-align: center;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+}
+
+span {
+    cursor: pointer;
+    margin-left: 10px;
+}
+span:hover {
+    transform: scale(5px);
+}
+.col5{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+table {
+    color: white;
+}
+tbody {
+    min-height: 50px;
+    border: 1px  solid white;
+}
