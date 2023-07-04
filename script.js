@@ -62,12 +62,14 @@ function resetForm() {
 }
 // Edit Function
 function onEdit(td) {
-    selectedRow = td.parentElement.parentElement.parentElement.parentElement;
+    selectedRow = td.parentElement.parentElement;
     document.getElementById("userName").value = selectedRow.cells[1].innerHTML;
     document.getElementById("email").value = selectedRow.cells[2].innerHTML;
     document.getElementById("age").value = selectedRow.cells[3].innerHTML;
     document.getElementById("gpa").value = selectedRow.cells[4].innerHTML;
-    document.getElementById("degree").value = selectedRow.cells[5][0].innerText;
+    document.getElementById("degree").value = selectedRow.cells[5].innerHTML;
+    document.getElementById("submit-button").value = "Edit Student";
+    document.getElementById("submit-button").classList.remove("rev");
 }
 // Update Record
 function updateRecord(formData) {
@@ -76,6 +78,8 @@ function updateRecord(formData) {
     selectedRow.cells[3].innerHTML = formData.age;
     selectedRow.cells[4].innerHTML = formData.gpa;
     selectedRow.cells[5].innerHTML = formData.degree;
+    document.getElementById("submit-button").value = "Add Student";
+    document.getElementById("submit-button").classList.add("rev");
 }
 // Delete Function
 function onDelete(td) {

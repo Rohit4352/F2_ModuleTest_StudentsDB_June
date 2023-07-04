@@ -21,50 +21,52 @@ edit_square
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Student Management CRUD</h2>
+    <div class="container">
+        <h2>Student Management CRUD</h2>
 
-    <form onsubmit="event.preventDefault(); onFormSubmit();">
+        <form onsubmit="event.preventDefault(); onFormSubmit();">
 
-        <div class="entry-fields">
-            <!-- Input Fields  -->
-            <input required type="text" name="userName" id="userName" placeholder="Name" value="Rohit">
-            <input type="email" name="email" id="email" placeholder="Email" value="rohit@google.com">
-            <input required type="number" name="gpa" id="gpa" placeholder="GPA" step="0.1" value="8">
-            <input required type="number" name="age" id="age" placeholder="Age" value="25">
-            <input required type="text" name="degree" id="degree" placeholder="Degree" value="Btech">
+            <div class="entry-fields">
+                <!-- Input Fields  -->
+                <input required type="text" name="userName" id="userName" placeholder="Name" value="Rohit">
+                <input type="email" name="email" id="email" placeholder="Email" value="rohit@google.com">
+                <input required type="number" name="gpa" id="gpa" placeholder="GPA" step="0.1" value="8">
+                <input required type="number" name="age" id="age" placeholder="Age" value="25">
+                <input required type="text" name="degree" id="degree" placeholder="Degree" value="Btech">
 
+            </div>
+
+            <!-- Form submit button -->
+            <div class="form-action-buttons">
+                <input class="rev" type="submit" value="Add Student" id="submit-button" >
+            </div>
+            <!-- <button type="submit" onclick="onFormSubmit()">SUBMIT</button> -->
+        </form>
+
+        <!-- Search Bar -->
+        <div class="search">
+            <input type="search" name="keySearch" id="keySearch" placeholder="Search By Name, email or degree">
         </div>
 
-        <!-- Form submit button -->
-        <div class="form-action-buttons">
-            <input type="submit" value="Add Student" >
-        </div>
-        <!-- <button type="submit" onclick="onFormSubmit()">SUBMIT</button> -->
-    </form>
-
-    <!-- Search Bar -->
-    <div class="search">
-        <input type="search" name="keySearch" id="keySearch" placeholder="Search By Name, email or degree">
+        <!-- Table Contents for students DB -->
+        <table class="list" id="stdlist" >
+            <!--Table Head-->
+            <thead>
+                <!--Row-1-->
+                <tr>
+                    <th>ID</th>
+                    <th>Student Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>GPA</th>
+                    <th>Degree</th>
+                </tr>
+            </thead>
+            <!--Table Body-->
+            <tbody>
+            </tbody>
+        </table>
     </div>
-
-    <!-- Table Contents for students DB -->
-    <table class="list" id="stdlist" >
-        <!--Table Head-->
-        <thead>
-            <!--Row-1-->
-            <tr>
-                <th>ID</th>
-                <th>Student Name</th>
-                <th>Email</th>
-                <th>Age</th>
-                <th>GPA</th>
-                <th>Degree</th>
-            </tr>
-        </thead>
-        <!--Table Body-->
-        <tbody>
-        </tbody>
-    </table>
     <script src="script.js"></script>
 </body>
 </html>

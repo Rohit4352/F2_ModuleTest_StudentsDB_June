@@ -1,6 +1,13 @@
 body {
+    background: url(img2.jpg) no-repeat center center fixed; 
+    background-size: cover;
+}
+.container {
     background-color: black;
-    margin: 20px;
+    width: 90%;
+    margin: auto ;
+    height: 90vh;
+    padding: 15px;
 }
 * {
     font-family: 'Inter', sans-serif;
@@ -32,8 +39,8 @@ input::placeholder{
 }
 
 form input[type=submit]{
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     width: 40%;
     margin-left: 20px;
     cursor: pointer;
@@ -43,6 +50,11 @@ form input[type=submit]:hover{
 }
 form input[type=submit]:active {
     transform: translateY(4px);
+}
+
+.rev{
+    background-color: white !important; 
+    color: black !important;
 }
 
 input[type=search] {
